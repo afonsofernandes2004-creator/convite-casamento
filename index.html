@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Susana & Bruno</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #fff; }
+        .invite-container { max-width: 100%; max-height: 100vh; text-align: center; }
+        img { width: 100%; height: auto; max-width: 600px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        #play-btn { position: fixed; bottom: 20px; right: 20px; padding: 10px; background: white; border-radius: 50%; cursor: pointer; border: 1px solid #ddd; font-size: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="invite-container">
+        <img src="convite.jpg" alt="Convite de Casamento">
+    </div>
+
+    <audio id="musica" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="play-btn" onclick="tocarMusica()">🎵</button>
+
+    <script>
+        function tocarMusica() {
+            var audio = document.getElementById("musica");
+            if (audio.paused) { audio.play(); } else { audio.pause(); }
+        }
+    </script>
+
+</body>
+</html>
